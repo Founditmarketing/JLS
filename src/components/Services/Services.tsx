@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import type { MouseEvent } from 'react';
 import { Leaf, Droplets, SprayCan, Sprout, Sun, Fence, ArrowRight } from 'lucide-react';
 import { useIsVisible } from '../../hooks/useIsVisible';
+import { Link } from 'react-router-dom';
 import styles from './Services.module.css';
 
 const ServiceCard = ({ icon: Icon, title, desc, delayClass }: any) => {
@@ -35,9 +36,9 @@ const ServiceCard = ({ icon: Icon, title, desc, delayClass }: any) => {
         <div className={styles.srvIcon}><Icon size={24} /></div>
         <h3>{title}</h3>
         <p>{desc}</p>
-        <a href={`/services/${title.toLowerCase().replace(/\s+/g, '-')}`} className={styles.srvLink}>
+        <Link to={`/services/${title.toLowerCase().replace(/\s+/g, '-')}`} className={styles.srvLink}>
           Learn More <ArrowRight size={14} />
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -1,6 +1,8 @@
 import { Phone, Mail, Clock, MapPin } from 'lucide-react';
 import styles from './Footer.module.css';
 
+import { Link } from 'react-router-dom';
+
 export default function Footer() {
   return (
     <footer className={styles.footer}>
@@ -27,12 +29,12 @@ export default function Footer() {
           <div>
             <h5>Services</h5>
             <ul className={styles.footerLinks}>
-              <li><a href="/services/landscaping">Landscaping</a></li>
-              <li><a href="/services/pool-construction">Pool Construction</a></li>
-              <li><a href="/services/irrigation">Irrigation</a></li>
-              <li><a href="/services/pool-maintenance">Pool Maintenance</a></li>
-              <li><a href="/services/outdoor-living">Outdoor Living</a></li>
-              <li><a href="/services/fencing">Fencing</a></li>
+              <li><Link to="/services/landscaping">Landscaping</Link></li>
+              <li><Link to="/services/pool-construction">Pool Construction</Link></li>
+              <li><Link to="/services/irrigation">Irrigation</Link></li>
+              <li><Link to="/services/pool-maintenance">Pool Maintenance</Link></li>
+              <li><Link to="/services/outdoor-living">Outdoor Living</Link></li>
+              <li><Link to="/services/fencing">Fencing</Link></li>
             </ul>
           </div>
           
