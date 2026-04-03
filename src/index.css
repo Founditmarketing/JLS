@@ -213,3 +213,7 @@ button {
   font-size: 1rem;
   line-height: 1.7;
 }
+
+@media(max-width: 500px) {
+  .sec-t { font-size: 1.95rem; }
+}

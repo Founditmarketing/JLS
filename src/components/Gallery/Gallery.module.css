@@ -194,6 +194,7 @@
 @media(max-width: 640px) {
   .galleryGrid { grid-template-columns: 1fr; }
   .filterNav {
+    width: 100%;
     flex-wrap: nowrap;
     justify-content: flex-start;
     overflow-x: auto;

@@ -131,6 +131,7 @@
   .testiSlide { display: contents; }
   .testiTrack {
     display: flex;
+    width: 100%;
     transform: none !important;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
