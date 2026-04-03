@@ -15,11 +15,11 @@ export default function Footer() {
           <div>
             <h5>Navigation</h5>
             <ul className={styles.footerLinks}>
-              <li><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#gallery">Gallery</a></li>
-              <li><a href="#reviews">Reviews</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/#about">About</a></li>
+              <li><a href="/#services">Services</a></li>
+              <li><a href="/#gallery">Gallery</a></li>
+              <li><a href="/#reviews">Reviews</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
@@ -27,12 +27,12 @@ export default function Footer() {
           <div>
             <h5>Services</h5>
             <ul className={styles.footerLinks}>
-              <li><a href="#services">Landscaping</a></li>
-              <li><a href="#services">Pool Construction</a></li>
-              <li><a href="#services">Irrigation</a></li>
-              <li><a href="#services">Pool Maintenance</a></li>
-              <li><a href="#services">Outdoor Living</a></li>
-              <li><a href="#services">Fencing</a></li>
+              <li><a href="/services/landscaping">Landscaping</a></li>
+              <li><a href="/services/pool-construction">Pool Construction</a></li>
+              <li><a href="/services/irrigation">Irrigation</a></li>
+              <li><a href="/services/pool-maintenance">Pool Maintenance</a></li>
+              <li><a href="/services/outdoor-living">Outdoor Living</a></li>
+              <li><a href="/services/fencing">Fencing</a></li>
             </ul>
           </div>
           

@@ -33,15 +33,15 @@ export default function Navbar() {
 
       <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
         <div className="container">
-          <a href="#" className={styles.navLogo}>
+          <a href="/" className={styles.navLogo}>
             JLS <span>Landscapes</span>
           </a>
           
           <ul className={styles.navLinks}>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#gallery">Gallery</a></li>
+            <li><a href="/#reviews">Reviews</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
           
@@ -59,10 +59,10 @@ export default function Navbar() {
         <button className={styles.mobMenuX} onClick={() => setMobileOpen(false)}>
           <X size={28} />
         </button>
-        <a href="#about" onClick={() => setMobileOpen(false)}>About</a>
-        <a href="#services" onClick={() => setMobileOpen(false)}>Services</a>
-        <a href="#gallery" onClick={() => setMobileOpen(false)}>Gallery</a>
-        <a href="#reviews" onClick={() => setMobileOpen(false)}>Reviews</a>
+        <a href="/#about" onClick={() => setMobileOpen(false)}>About</a>
+        <a href="/#services" onClick={() => setMobileOpen(false)}>Services</a>
+        <a href="/#gallery" onClick={() => setMobileOpen(false)}>Gallery</a>
+        <a href="/#reviews" onClick={() => setMobileOpen(false)}>Reviews</a>
         <a href="#contact" onClick={() => setMobileOpen(false)}>Contact</a>
         <a href="tel:9038214792" className="btn-p" style={{ marginTop: '1rem' }}>
           Call (903) 821-4792

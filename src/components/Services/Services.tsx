@@ -35,7 +35,7 @@ const ServiceCard = ({ icon: Icon, title, desc, delayClass }: any) => {
         <div className={styles.srvIcon}><Icon size={24} /></div>
         <h3>{title}</h3>
         <p>{desc}</p>
-        <a href="#contact" className={styles.srvLink}>
+        <a href={`/services/${title.toLowerCase().replace(/\s+/g, '-')}`} className={styles.srvLink}>
           Learn More <ArrowRight size={14} />
         </a>
       </div>

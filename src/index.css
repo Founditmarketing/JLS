@@ -65,18 +65,6 @@ button {
   font-family: inherit;
 }
 
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--cyan);
-  border-radius: 3px;
-}
 
 .container {
   max-width: 1320px;

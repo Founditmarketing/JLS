@@ -247,8 +247,10 @@
 }
 
 @media(max-width: 1024px) {
-  .heroContainer { grid-template-columns: 1fr; }
-  .heroVisual { display: none; }
+  .heroContainer { grid-template-columns: 1fr; gap: 3rem; }
+  .heroVisual { display: block; max-width: 500px; margin: 0 auto; width: 100%; position: relative; animation: slideUp 1.2s var(--ease) 0.7s forwards; }
+  .heroFloat { display: none; }
+  .heroFloat2 { display: none; }
   .heroContent { text-align: center; margin: 0 auto; }
   .heroDesc { margin-left: auto; margin-right: auto; }
   .heroActions { justify-content: center; }

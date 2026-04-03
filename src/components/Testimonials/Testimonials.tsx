@@ -6,7 +6,7 @@ import styles from './Testimonials.module.css';
 export default function Testimonials() {
   const { ref, isVisible } = useIsVisible();
   const [curSlide, setCurSlide] = useState(0);
-  const totalSlides = 2;
+  const totalSlides = 2; // 4 reviews, 2 per slide on desktop
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -38,10 +38,11 @@ export default function Testimonials() {
                   <Star fill="currentColor" size={15}/>
                   <Star fill="currentColor" size={15}/>
                 </div>
-                <p className={styles.tText}>Jason and his crew are the absolute best. I had a sprinkler system installed covering 2.5 acres plus seeding — their charge was very competitive, thousands less than competitors. Highly recommend!</p>
+                <p className={styles.tText}>Jason and his crew are the absolute best. I had a sprinkler system installed in my front and back yard covering 2.5 acres plus seeding for lawn. Their charge was very competitive, thousands less than competitors. I highly recommend this company to anyone needing sprinklers or landscaping.</p>
                 <div className={styles.tAuthor}>Thomas Carroll</div>
                 <div className={styles.tRole}>Denison, Texas</div>
               </div>
+              
               <div className={styles.tCard}>
                 <div className={styles.tQuote}>"</div>
                 <div className={styles.tStars}>
@@ -51,22 +52,9 @@ export default function Testimonials() {
                   <Star fill="currentColor" size={15}/>
                   <Star fill="currentColor" size={15}/>
                 </div>
-                <p className={styles.tText}>To say the experience was amazing would be an understatement. Workers picked up after themselves daily, craftsmanship and attention to detail were flawless. My family was swimming in crystal clear Caribbean-colored water in weeks.</p>
+                <p className={styles.tText}>Hired JLS Landscaping to install my inground Pool. To say the experience was amazing would be an understatement. Workers picked up after themselves daily, craftsmanship & attention to detail were flawless. My family was swimming in weeks in crystal clear Caribbean-colored water in a beautifully landscaped area.</p>
                 <div className={styles.tAuthor}>Tracy Goins</div>
                 <div className={styles.tRole}>Pool Installation Client</div>
-              </div>
-              <div className={styles.tCard}>
-                <div className={styles.tQuote}>"</div>
-                <div className={styles.tStars}>
-                  <Star fill="currentColor" size={15}/>
-                  <Star fill="currentColor" size={15}/>
-                  <Star fill="currentColor" size={15}/>
-                  <Star fill="currentColor" size={15}/>
-                  <Star fill="currentColor" size={15}/>
-                </div>
-                <p className={styles.tText}>JLS pool did a great job on my pool build. They are knowledgeable and their insight helped make our pool design easier and more practical. Absolutely worth the investment.</p>
-                <div className={styles.tAuthor}>Kiran Karnik</div>
-                <div className={styles.tRole}>Pool Build Client</div>
               </div>
             </div>
             
@@ -80,23 +68,30 @@ export default function Testimonials() {
                   <Star fill="currentColor" size={15}/>
                   <Star fill="currentColor" size={15}/>
                 </div>
-                <p className={styles.tText}>It was well worth the wait. They did an amazing job! Plus they helped this old gal out by filling and spreading out dirt where there once was a rickety fence. Thanks JLS — you guys ROCK!</p>
+                <p className={styles.tText}>Though it took a little extra time before they could start my project… it was well worth the wait. They did an amazing job! Plus they helped this old gal out by filling and spreading out dirt where there once was a rickety fence. Thanks JLS you guys ROCK!</p>
                 <div className={styles.tAuthor}>Catherine Stokes</div>
-                <div className={styles.tRole}>Fencing Client</div>
+                <div className={styles.tRole}>Fencing & Landscaping Client</div>
               </div>
-              <div className={`${styles.tCard} ${styles.tCardDummy}`}>
-                <div className={styles.dummyText}>Your Story<br/><em>Here</em></div>
-                <a href="#contact" className="btn-p" style={{ fontSize: '0.75rem', padding: '0.6rem 1.5rem' }}>Get Started</a>
-              </div>
-              <div className={`${styles.tCard} ${styles.tCardDummy}`}>
-                <div className={styles.dummyText}>Join Our<br/><em style={{color: 'var(--gold)'}}>5-Star Family</em></div>
+
+              <div className={styles.tCard}>
+                <div className={styles.tQuote}>"</div>
+                <div className={styles.tStars}>
+                  <Star fill="currentColor" size={15}/>
+                  <Star fill="currentColor" size={15}/>
+                  <Star fill="currentColor" size={15}/>
+                  <Star fill="currentColor" size={15}/>
+                  <Star fill="currentColor" size={15}/>
+                </div>
+                <p className={styles.tText}>JLS pool did a good job on my pool build. They are knowledgeable and their insight helped make our pool design easier and more practical. The final result exceeded our expectations.</p>
+                <div className={styles.tAuthor}>Kiran Karnik</div>
+                <div className={styles.tRole}>Pool Build Client</div>
               </div>
             </div>
           </div>
           
           <div className={styles.testiDots}>
-            <button className={`${styles.testiDot} ${curSlide === 0 ? styles.active : ''}`} onClick={() => setCurSlide(0)}></button>
-            <button className={`${styles.testiDot} ${curSlide === 1 ? styles.active : ''}`} onClick={() => setCurSlide(1)}></button>
+            <button aria-label="Slide 1" className={`${styles.testiDot} ${curSlide === 0 ? styles.active : ''}`} onClick={() => setCurSlide(0)}></button>
+            <button aria-label="Slide 2" className={`${styles.testiDot} ${curSlide === 1 ? styles.active : ''}`} onClick={() => setCurSlide(1)}></button>
           </div>
         </div>
       </div>

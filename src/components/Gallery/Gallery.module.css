@@ -3,16 +3,42 @@
   overflow: hidden;
 }
 
-.galleryMasonry {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.filterNav {
+  display: flex;
+  justify-content: center;
   gap: 1rem;
-  padding: 0;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
 }
 
-.galleryMasonry .gItem:nth-child(1) {
-  grid-column: span 2;
-  grid-row: span 2;
+.filterBtn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-sec);
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+}
+
+.filterBtn:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.filterBtn.active {
+  background: var(--cyan);
+  border-color: var(--cyan);
+  color: var(--bg);
+  box-shadow: 0 4px 15px rgba(0, 196, 204, 0.3);
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
 }
 
 .gItem {
@@ -22,10 +48,6 @@
   border: 1px solid var(--border);
   cursor: pointer;
   aspect-ratio: 4/3;
-}
-
-.gItem:nth-child(1) {
-  aspect-ratio: auto;
 }
 
 .gItem img {
@@ -44,7 +66,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(9, 15, 12, 0.7));
+  background: linear-gradient(180deg, transparent 40%, rgba(9, 15, 12, 0.9));
   opacity: 0;
   transition: opacity 0.4s;
   pointer-events: none;
@@ -54,28 +76,50 @@
   opacity: 1;
 }
 
+.gLabel {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  color: var(--bg);
+  background: var(--cyan);
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s var(--ease);
+}
+
+.gItem:hover .gLabel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .gZoom {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  background: var(--cyan);
-  color: var(--bg);
+  background: var(--bg-card);
+  color: var(--text);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.4s var(--ease);
   z-index: 2;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .gItem:hover .gZoom {
   transform: translate(-50%, -50%) scale(1);
 }
 
-/* Lightbox */
+/* Lightbox styles are the same as previously, retained */
 .lightbox {
   position: fixed;
   inset: 0;
@@ -109,66 +153,44 @@
   transform: scale(1);
 }
 
-.lightboxClose {
+.lightboxClose, .lightboxNav {
   position: absolute;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  transition: all 0.3s;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.lightboxClose:hover, .lightboxNav:hover {
+  background: var(--cyan);
+  color: var(--bg);
+}
+
+.lightboxClose {
   top: 2rem;
   right: 2rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text);
-  transition: all 0.3s;
-  cursor: pointer;
-  z-index: 10001;
-}
-
-.lightboxClose:hover {
-  background: var(--cyan);
-  color: var(--bg);
-}
-
-.lightboxNav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text);
-  transition: all 0.3s;
-  cursor: pointer;
-  z-index: 10001;
-}
-
-.lightboxNav:hover {
-  background: var(--cyan);
-  color: var(--bg);
 }
 
 .lightboxPrev {
+  top: 50%;
   left: 2rem;
+  transform: translateY(-50%);
 }
 
 .lightboxNext {
+  top: 50%;
   right: 2rem;
-}
-
-@media(max-width: 1024px) {
-  .galleryMasonry { grid-template-columns: repeat(3, 1fr); }
-  .galleryMasonry .gItem:nth-child(1) { grid-column: span 2; }
+  transform: translateY(-50%);
 }
 
 @media(max-width: 640px) {
-  .galleryMasonry { grid-template-columns: 1fr 1fr; }
-  .galleryMasonry .gItem:nth-child(1) { grid-column: span 2; }
+  .galleryGrid { grid-template-columns: 1fr; }
 }
