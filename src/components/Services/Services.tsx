@@ -5,7 +5,10 @@ import { useIsVisible } from '../../hooks/useIsVisible';
 import { Link } from 'react-router-dom';
 import styles from './Services.module.css';
 
-const ServiceCard = ({ icon: Icon, title, desc, delayClass }: any) => {
+import type { ElementType } from 'react';
+
+interface CardProps { icon: ElementType; title: string; desc: string; delayClass?: string; }
+const ServiceCard = ({ icon: Icon, title, desc, delayClass }: CardProps) => {
   const { ref, isVisible } = useIsVisible();
   const cardRef = useRef<HTMLDivElement>(null);
 

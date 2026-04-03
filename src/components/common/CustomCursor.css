@@ -38,3 +38,11 @@ body:has(button:hover) .cursor-dot {
   height: 10px;
   background: var(--gold);
 }
+
+@media (max-width: 1024px) {
+  .cursor-dot, .cursor-ring { display: none !important; }
+}
+
+@media (pointer: coarse) {
+  .cursor-dot, .cursor-ring { display: none !important; }
+}

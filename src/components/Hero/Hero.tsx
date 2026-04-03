@@ -4,7 +4,8 @@ import { ArrowRight, Star } from 'lucide-react';
 import { useCounters } from '../../hooks/useCounters';
 import styles from './Hero.module.css';
 
-const StatCounter = ({ target, label, suffix = '', decimal = false, raw = false }: any) => {
+interface StatProps { target: number; label: string; suffix?: string; decimal?: boolean; raw?: boolean; }
+const StatCounter = ({ target, label, suffix = '', decimal = false, raw = false }: StatProps) => {
   const { ref, value } = useCounters(target, 1800, decimal);
   
   return (

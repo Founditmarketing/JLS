@@ -8,14 +8,14 @@ export function useCounters(target: number, duration = 1800, isDecimal = false) 
   useEffect(() => {
     if (!isVisible) return;
 
-    let start = performance.now();
+    const start = performance.now();
     let reqId: number;
     const from = 0;
 
     const tick = (now: number) => {
       const p = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - p, 4);
-      let nextValue = from + (target - from) * eased;
+      const nextValue = from + (target - from) * eased;
       
       setValue(isDecimal ? parseFloat(nextValue.toFixed(1)) : Math.round(nextValue));
 
