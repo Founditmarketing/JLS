@@ -9,7 +9,10 @@ export default function Footer() {
       <div className="container">
         <div className={styles.footerTop}>
           <div className={styles.footerBrand}>
-            <div className={styles.footerLogo}>JLS <span>Landscapes</span></div>
+            <div className={styles.footerLogo}>
+              <img src="/logo.png" alt="JLS Logo" className={styles.logoIcon} />
+              JLS <span>Landscapes</span>
+            </div>
             <p>At JLS Landscaping & Pools of Texoma — We Do It All. Transforming outdoor spaces across North Texas and Southern Oklahoma since 1999.</p>
             <p className={styles.footerAreas}>Proudly serving Sherman, Denison, Lake Texoma, Ardmore, Durant, Bonham, Gainesville, Whitesboro, Tioga, Leonard, McKinney, Melissa, Celina, Gunter, Plano, Prosper, and Farmersville.</p>
           </div>

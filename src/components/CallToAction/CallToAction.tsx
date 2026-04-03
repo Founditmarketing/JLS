@@ -30,7 +30,7 @@ export default function CallToAction() {
       ctx.fillRect(0, 0, w, h);
       
       const pts = [
-        { x: w * 0.3 + Math.sin(t * 0.4) * w * 0.15, y: h * 0.5 + Math.cos(t * 0.3) * h * 0.3, col: 'rgba(0,196,204,.12)' },
+        { x: w * 0.3 + Math.sin(t * 0.4) * w * 0.15, y: h * 0.5 + Math.cos(t * 0.3) * h * 0.3, col: 'rgba(171, 31, 46,.12)' },
         { x: w * 0.7 + Math.cos(t * 0.35) * w * 0.15, y: h * 0.4 + Math.sin(t * 0.45) * h * 0.25, col: 'rgba(200,149,58,.08)' },
         { x: w * 0.5 + Math.sin(t * 0.5) * w * 0.2, y: h * 0.6 + Math.cos(t * 0.25) * h * 0.2, col: 'rgba(0,150,160,.07)' }
       ];

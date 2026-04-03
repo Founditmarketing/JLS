@@ -12,7 +12,7 @@
 .cursor-dot {
   width: 6px;
   height: 6px;
-  background: var(--cyan);
+  background: var(--accent);
   transform: translate(-50%, -50%);
   transition: width 0.2s, height 0.2s, background 0.2s;
 }
@@ -20,7 +20,7 @@
 .cursor-ring {
   width: 36px;
   height: 36px;
-  border: 1.5px solid rgba(0, 196, 204, 0.5);
+  border: 1.5px solid rgba(171, 31, 46, 0.5);
   transform: translate(-50%, -50%);
   transition: width 0.3s var(--ease), height 0.3s var(--ease), border-color 0.3s;
 }
@@ -29,7 +29,7 @@ body:has(a:hover) .cursor-ring,
 body:has(button:hover) .cursor-ring {
   width: 56px;
   height: 56px;
-  border-color: var(--cyan);
+  border-color: var(--accent);
 }
 
 body:has(a:hover) .cursor-dot,

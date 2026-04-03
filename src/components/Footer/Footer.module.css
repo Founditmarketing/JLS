@@ -16,14 +16,24 @@
 }
 
 .footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   font-family: var(--ff-d);
   font-size: 1.7rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
+.logoIcon {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: screen;
+}
+
 .footerLogo span {
-  color: var(--cyan);
+  color: var(--accent);
 }
 
 .footerBrand > p {
@@ -61,12 +71,12 @@
   content: '';
   width: 0;
   height: 1px;
-  background: var(--cyan);
+  background: var(--accent);
   transition: width 0.3s, margin 0.3s;
 }
 
 .footerLinks a:hover {
-  color: var(--cyan);
+  color: var(--accent);
 }
 
 .footerLinks a:hover::before {
@@ -84,7 +94,7 @@
 }
 
 .footerCi svg {
-  color: var(--cyan);
+  color: var(--accent);
   flex-shrink: 0;
 }
 
@@ -93,7 +103,7 @@
 }
 
 .footerCi a:hover {
-  color: var(--cyan);
+  color: var(--accent);
 }
 
 .footerBottom {
@@ -131,7 +141,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: var(--cyan);
+  background: var(--accent);
   color: var(--bg);
   padding: 0.8rem;
   border-radius: 14px;

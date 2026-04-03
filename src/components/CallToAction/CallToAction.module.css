@@ -28,7 +28,7 @@
 .ctaContainer h2 em {
   font-weight: 600;
   font-style: italic;
-  color: var(--cyan);
+  color: var(--accent);
 }
 
 .ctaDesc {

@@ -34,6 +34,7 @@ export default function Navbar() {
       <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
         <div className="container">
           <a href="/" className={styles.navLogo}>
+            <img src="/logo.png" alt="JLS Logo" className={styles.logoIcon} />
             JLS <span>Landscapes</span>
           </a>
           

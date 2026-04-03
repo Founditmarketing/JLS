@@ -51,7 +51,7 @@
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--cyan);
+  color: var(--accent);
   margin-bottom: 1.5rem;
   opacity: 0;
   animation: slideUp 0.8s var(--ease) 0.4s forwards;
@@ -61,7 +61,7 @@
   content: '';
   width: 36px;
   height: 1.5px;
-  background: var(--cyan);
+  background: var(--accent);
 }
 
 .hero h1 {
@@ -78,7 +78,7 @@
 .hero h1 strong {
   font-weight: 600;
   font-style: italic;
-  color: var(--cyan);
+  color: var(--accent);
   position: relative;
 }
 
@@ -89,7 +89,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, var(--cyan), transparent);
+  background: linear-gradient(90deg, var(--accent), transparent);
   opacity: 0.5;
 }
 
@@ -147,12 +147,12 @@
   width: 50px;
   height: 50px;
   border-radius: 14px;
-  background: var(--cyan-glow);
-  border: 1px solid var(--border-cy);
+  background: var(--accent-glow);
+  border: 1px solid var(--border-accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--cyan);
+  color: var(--accent);
 }
 
 .heroFloat .lbl {
@@ -220,7 +220,7 @@
   font-family: var(--ff-d);
   font-size: clamp(2rem, 3.5vw, 2.8rem);
   font-weight: 600;
-  color: var(--cyan);
+  color: var(--accent);
 }
 
 .statL {
@@ -262,7 +262,7 @@
     content: '';
     width: 36px;
     height: 1.5px;
-    background: var(--cyan);
+    background: var(--accent);
   }
 }
 

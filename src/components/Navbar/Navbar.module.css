@@ -35,7 +35,7 @@
 }
 
 .topbarRight a:hover {
-  color: var(--cyan);
+  color: var(--accent);
 }
 
 .topbarBadge {
@@ -75,14 +75,25 @@
 }
 
 .navLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   font-family: var(--ff-d);
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.02em;
 }
 
+.logoIcon {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  /* Optional: Lighten blend mode merges pure black background perfectly into dark UI */
+  mix-blend-mode: screen;
+}
+
 .navLogo span {
-  color: var(--cyan);
+  color: var(--accent);
 }
 
 .navLinks {
@@ -109,7 +120,7 @@
   left: 0;
   width: 0;
   height: 1.5px;
-  background: var(--cyan);
+  background: var(--accent);
   transition: width 0.4s var(--ease);
 }
 
@@ -122,7 +133,7 @@
 }
 
 .navCta {
-  background: var(--cyan);
+  background: var(--accent);
   color: var(--bg);
   padding: 0.55rem 1.4rem;
   border-radius: 100px;
@@ -137,9 +148,9 @@
 }
 
 .navCta:hover {
-  background: var(--cyan-bright);
+  background: var(--accent-bright);
   transform: translateY(-1px);
-  box-shadow: 0 8px 32px rgba(0, 196, 204, 0.35);
+  box-shadow: 0 8px 32px rgba(171, 31, 46, 0.35);
 }
 
 .mobTog {
@@ -179,7 +190,7 @@
 }
 
 .mobMenu a:hover {
-  color: var(--cyan);
+  color: var(--accent);
 }
 
 .mobMenuX {

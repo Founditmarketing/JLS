@@ -13,7 +13,7 @@
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 196, 204, 0.06), transparent 70%);
+  background: radial-gradient(circle, rgba(171, 31, 46, 0.06), transparent 70%);
   pointer-events: none;
 }
 
@@ -44,7 +44,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
   opacity: 0;
   transition: opacity 0.4s;
 }
@@ -54,16 +54,16 @@
   position: absolute;
   inset: 0;
   border-radius: 18px;
-  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 196, 204, 0.06), transparent 60%);
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(171, 31, 46, 0.06), transparent 60%);
   opacity: 0;
   transition: opacity 0.4s;
   pointer-events: none;
 }
 
 .srvCard:hover {
-  border-color: var(--border-cy);
+  border-color: var(--border-accent);
   transform: translateY(-6px) rotateX(2deg) rotateY(-1deg);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35), 0 0 80px var(--cyan-glow);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35), 0 0 80px var(--accent-glow);
 }
 
 .srvCard:hover::before, .srvCard:hover::after {
@@ -74,20 +74,20 @@
   width: 60px;
   height: 60px;
   border-radius: 16px;
-  background: var(--cyan-glow);
-  border: 1px solid var(--border-cy);
+  background: var(--accent-glow);
+  border: 1px solid var(--border-accent);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
-  color: var(--cyan);
+  color: var(--accent);
   transition: all 0.5s var(--ease);
 }
 
 .srvCard:hover .srvIcon {
-  background: var(--cyan);
+  background: var(--accent);
   color: var(--bg);
-  box-shadow: 0 8px 24px rgba(0, 196, 204, 0.3);
+  box-shadow: 0 8px 24px rgba(171, 31, 46, 0.3);
   transform: scale(1.05);
 }
 
@@ -112,7 +112,7 @@
   margin-top: 1.5rem;
   font-size: 0.78rem;
   font-weight: 600;
-  color: var(--cyan);
+  color: var(--accent);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   transition: gap 0.3s, color 0.3s;
@@ -120,7 +120,7 @@
 
 .srvLink:hover {
   gap: 0.8rem;
-  color: var(--cyan-bright);
+  color: var(--accent-bright);
 }
 
 @media(max-width: 1024px) {

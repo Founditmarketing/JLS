@@ -22,7 +22,7 @@
 
 .mItem:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0, 196, 204, 0.15);
+  box-shadow: 0 15px 40px rgba(171, 31, 46, 0.15);
 }
 
 .mItem img {

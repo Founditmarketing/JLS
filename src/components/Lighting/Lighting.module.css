@@ -25,7 +25,7 @@
 }
 
 .logoItem:hover {
-  color: var(--cyan);
+  color: var(--accent);
   opacity: 1;
 }
 

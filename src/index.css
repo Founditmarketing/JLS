@@ -12,13 +12,13 @@
   --text: #f0efe8;
   --text-sec: #9aaba2;
   --text-muted: #56695f;
-  --cyan: #00c4cc;
-  --cyan-glow: rgba(0, 196, 204, 0.12);
-  --cyan-bright: #00e0ea;
+  --accent: #AB1F2E;
+  --accent-glow: rgba(171, 31, 46, 0.12);
+  --accent-bright: #cc243a;
   --gold: #c8953a;
   --gold-glow: rgba(200, 149, 58, 0.1);
   --border: rgba(255, 255, 255, 0.06);
-  --border-cy: rgba(0, 196, 204, 0.18);
+  --border-accent: rgba(171, 31, 46, 0.18);
   --ff-d: 'Cormorant Garamond', Georgia, serif;
   --ff-b: 'Outfit', system-ui, sans-serif;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -102,8 +102,8 @@ button {
 
 /* Global Buttons */
 .btn-p {
-  background: var(--cyan);
-  color: var(--bg);
+  background: var(--accent);
+  color: #ffffff;
   padding: 0.9rem 2.3rem;
   border-radius: 100px;
   font-size: 0.83rem;
@@ -132,9 +132,9 @@ button {
 }
 
 .btn-p:hover {
-  background: var(--cyan-bright);
+  background: var(--accent-bright);
   transform: translateY(-2px);
-  box-shadow: 0 14px 44px rgba(0,196,204,0.35);
+  box-shadow: 0 14px 44px rgba(171, 31, 46, 0.35);
 }
 
 .btn-p svg {
@@ -162,9 +162,9 @@ button {
 }
 
 .btn-s:hover {
-  border-color: var(--cyan);
-  color: var(--cyan);
-  background: var(--cyan-glow);
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-glow);
 }
 
 /* Global Section Headers */
@@ -179,7 +179,7 @@ button {
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--cyan);
+  color: var(--accent);
   margin-bottom: 1rem;
   display: inline-flex;
   align-items: center;
@@ -190,7 +190,7 @@ button {
   content: '';
   width: 24px;
   height: 1.5px;
-  background: var(--cyan);
+  background: var(--accent);
 }
 
 .sec-t {
@@ -205,7 +205,7 @@ button {
 .sec-t em {
   font-weight: 600;
   font-style: italic;
-  color: var(--cyan);
+  color: var(--accent);
 }
 
 .sec-sub {

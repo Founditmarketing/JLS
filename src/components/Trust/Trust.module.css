@@ -28,12 +28,12 @@
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background: var(--cyan);
+  background: var(--accent);
   transition: width 0.4s var(--ease);
 }
 
 .trustCard:hover {
-  border-color: var(--border-cy);
+  border-color: var(--border-accent);
   transform: translateY(-4px);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
 }
@@ -47,19 +47,19 @@
   height: 52px;
   border-radius: 50%;
   margin: 0 auto 1.2rem;
-  background: var(--cyan-glow);
-  border: 1px solid var(--border-cy);
+  background: var(--accent-glow);
+  border: 1px solid var(--border-accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--cyan);
+  color: var(--accent);
   transition: all 0.4s;
 }
 
 .trustCard:hover .trustIcon {
-  background: var(--cyan);
+  background: var(--accent);
   color: var(--bg);
-  box-shadow: 0 0 20px rgba(0, 196, 204, 0.3);
+  box-shadow: 0 0 20px rgba(171, 31, 46, 0.3);
 }
 
 .trustCard h4 {

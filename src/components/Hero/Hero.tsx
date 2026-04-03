@@ -35,7 +35,7 @@ export default function Hero() {
     resize();
     window.addEventListener('resize', resize);
 
-    const cols = ['rgba(0,196,204,', 'rgba(200,149,58,', 'rgba(0,120,130,'];
+    const cols = ['rgba(171, 31, 46,', 'rgba(200,149,58,', 'rgba(0,120,130,'];
     const ripples = Array.from({ length: 6 }).map((_, i) => ({
       x: Math.random() * w, 
       y: Math.random() * h,

@@ -24,15 +24,15 @@
 }
 
 .filterBtn:hover {
-  border-color: var(--cyan);
-  color: var(--cyan);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .filterBtn.active {
-  background: var(--cyan);
-  border-color: var(--cyan);
+  background: var(--accent);
+  border-color: var(--accent);
   color: var(--bg);
-  box-shadow: 0 4px 15px rgba(0, 196, 204, 0.3);
+  box-shadow: 0 4px 15px rgba(171, 31, 46, 0.3);
 }
 
 .galleryGrid {
@@ -81,7 +81,7 @@
   bottom: 1.5rem;
   left: 1.5rem;
   color: var(--bg);
-  background: var(--cyan);
+  background: var(--accent);
   padding: 0.4rem 1rem;
   border-radius: 6px;
   font-size: 0.75rem;
@@ -170,7 +170,7 @@
 }
 
 .lightboxClose:hover, .lightboxNav:hover {
-  background: var(--cyan);
+  background: var(--accent);
   color: var(--bg);
 }
 

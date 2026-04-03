@@ -59,7 +59,7 @@
   font-family: var(--ff-d);
   font-size: 10rem;
   font-weight: 700;
-  color: var(--cyan);
+  color: var(--accent);
   opacity: 0.03;
   line-height: 1;
   pointer-events: none;
@@ -121,8 +121,8 @@
 }
 
 .testiDot.active {
-  background: var(--cyan);
-  box-shadow: 0 0 12px rgba(0, 196, 204, 0.4);
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(171, 31, 46, 0.4);
   transform: scale(1.1);
 }
 
