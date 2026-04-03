@@ -247,16 +247,28 @@
 }
 
 @media(max-width: 1024px) {
-  .heroContainer { grid-template-columns: 1fr; gap: 3rem; }
+  .heroContainer { grid-template-columns: 1fr; gap: 2rem; }
   .heroVisual { display: block; max-width: 500px; margin: 0 auto; width: 100%; position: relative; animation: slideUp 1.2s var(--ease) 0.7s forwards; }
-  .heroFloat { display: none; }
-  .heroFloat2 { display: none; }
+  .heroFloat { left: -10px; bottom: -10px; padding: 0.8rem 1rem; }
+  .heroFloat2 { right: -10px; top: 10px; padding: 0.6rem 1rem; }
+  .heroFloatIcon { width: 36px; height: 36px; }
+  .heroFloat .val { font-size: 1.2rem; }
+  .heroFloat2 .num { font-size: 1.4rem; }
   .heroContent { text-align: center; margin: 0 auto; }
   .heroDesc { margin-left: auto; margin-right: auto; }
   .heroActions { justify-content: center; }
   .heroEyebrow { justify-content: center; }
+  .heroEyebrow::after {
+    content: '';
+    width: 36px;
+    height: 1.5px;
+    background: var(--cyan);
+  }
 }
 
 @media(max-width: 640px) {
   .statsContainer { gap: 1.5rem; flex-wrap: wrap; }
+  .heroActions { flex-direction: column; width: 100%; }
+  .heroActions a { width: 100%; justify-content: center; }
+  .hero { padding-top: 4rem; }
 }
