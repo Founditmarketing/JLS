@@ -193,4 +193,14 @@
 
 @media(max-width: 640px) {
   .galleryGrid { grid-template-columns: 1fr; }
+  .filterNav {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .filterNav::-webkit-scrollbar { display: none; }
+  .filterBtn { flex-shrink: 0; }
 }

@@ -271,4 +271,11 @@
   .heroActions { flex-direction: column; width: 100%; }
   .heroActions a { width: 100%; justify-content: center; }
   .hero { padding-top: 4rem; }
+  .heroEyebrow::before, .heroEyebrow::after { width: 16px; }
+  .heroFloat { transform: scale(0.65); left: -30px; bottom: -20px; }
+  .heroFloat2 { transform: scale(0.65); right: -30px; top: -10px; }
+}
+
+@media(max-width: 480px) {
+  .hero h1 { font-size: 2.4rem; }
 }

@@ -80,5 +80,20 @@
 }
 
 @media(max-width: 640px) {
-  .trustGrid { grid-template-columns: 1fr; }
+  .trustGrid { 
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    scroll-padding-left: 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  .trustGrid::-webkit-scrollbar { display: none; }
+  .trustGrid { scrollbar-width: none; }
+  .trustCard {
+    min-width: 85vw;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
 }

@@ -128,6 +128,23 @@
 }
 
 @media(max-width: 1024px) {
-  .testiSlide { grid-template-columns: 1fr; }
-  .tCard { max-width: 600px; margin: 0 auto; width: 100%; }
+  .testiSlide { display: contents; }
+  .testiTrack {
+    display: flex;
+    transform: none !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem;
+    padding: 0 1.5rem 2rem 1.5rem;
+    scroll-padding-left: 1.5rem;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .testiTrack::-webkit-scrollbar { display: none; }
+  .tCard { max-width: unset; min-width: 85vw; margin: 0; width: auto; flex-shrink: 0; scroll-snap-align: center; }
+  .testiDots { display: none; }
+}
+
+@media(max-width: 640px) {
+  .testi { padding: 4rem 0; }
 }

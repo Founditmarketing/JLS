@@ -134,4 +134,5 @@
 
 @media(max-width: 640px) {
   .aboutPts { grid-template-columns: 1fr; }
+  .aboutBadge { transform: scale(0.65); left: -15px; bottom: -15px; }
 }

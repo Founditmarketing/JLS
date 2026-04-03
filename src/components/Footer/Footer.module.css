@@ -145,8 +145,10 @@
 }
 
 @media(max-width: 640px) {
-  .footerTop { grid-template-columns: 1fr; }
-  .footerBottom { flex-direction: column; text-align: center; gap: 0.5rem; }
-  .mobCta { display: block; }
-  .footer { padding-bottom: 70px; }
+  .footerTop { grid-template-columns: 1fr; gap: 2rem; }
+  .footerBottom { flex-direction: column; text-align: center; gap: 1rem; }
+  .mobCta { display: block; padding: 0.6rem 1rem; }
+  .footer { padding-bottom: 90px; }
+  .footerLinks a { padding: 8px 0; display: inline-flex; }
+  .footerCi { padding: 8px 0; }
 }
