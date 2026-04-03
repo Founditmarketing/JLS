@@ -128,7 +128,12 @@
 }
 
 @media(max-width: 1024px) {
-  .testiSlide { display: contents; }
+  .testiSlide { 
+    display: flex; 
+    gap: 1.5rem; 
+    width: auto; 
+    flex-shrink: 0;
+  }
   .testiTrack {
     display: flex;
     width: 100%;

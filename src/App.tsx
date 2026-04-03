@@ -4,11 +4,13 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
 import ServicePage from './pages/ServicePage';
+import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <Navbar />
         <main>
           <Routes>
