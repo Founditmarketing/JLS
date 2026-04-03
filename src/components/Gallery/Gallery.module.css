@@ -199,9 +199,8 @@
     justify-content: flex-start;
     overflow-x: auto;
     padding-bottom: 1rem;
-    scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
   }
-  .filterNav::-webkit-scrollbar { display: none; }
   .filterBtn { flex-shrink: 0; }
 }

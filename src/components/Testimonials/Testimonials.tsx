@@ -28,7 +28,6 @@ export default function Testimonials() {
             className={styles.testiTrack} 
             style={{ transform: `translateX(-${curSlide * 100}%)` }}
           >
-            <div className={styles.testiSlide}>
               <div className={styles.tCard}>
                 <div className={styles.tQuote}>"</div>
                 <div className={styles.tStars}>
@@ -56,9 +55,7 @@ export default function Testimonials() {
                 <div className={styles.tAuthor}>Tracy Goins</div>
                 <div className={styles.tRole}>Pool Installation Client</div>
               </div>
-            </div>
             
-            <div className={styles.testiSlide}>
               <div className={styles.tCard}>
                 <div className={styles.tQuote}>"</div>
                 <div className={styles.tStars}>
@@ -86,7 +83,6 @@ export default function Testimonials() {
                 <div className={styles.tAuthor}>Kiran Karnik</div>
                 <div className={styles.tRole}>Pool Build Client</div>
               </div>
-            </div>
           </div>
           
           <div className={styles.testiDots}>
