@@ -26,29 +26,33 @@
 .tCard {
   width: calc(50% - 0.75rem);
   flex-shrink: 0;
-  padding: 2.5rem 2rem;
-  border-radius: 18px;
-  background: var(--bg);
-  border: 1px solid var(--border);
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   position: relative;
   transition: all 0.4s;
+  overflow: hidden;
 }
 
 .tCard:hover {
-  border-color: var(--border-cy);
+  border-color: rgba(255, 255, 255, 0.09);
   transform: translateY(-3px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
 }
 
 .tQuote {
   position: absolute;
-  top: 1.2rem;
-  right: 1.8rem;
+  top: -1rem;
+  right: 1.5rem;
   font-family: var(--ff-d);
-  font-size: 4.5rem;
+  font-size: 8rem;
   font-weight: 700;
   color: var(--cyan);
-  opacity: 0.1;
+  opacity: 0.04;
   line-height: 1;
+  pointer-events: none;
 }
 
 .tStars {
@@ -67,14 +71,18 @@
 }
 
 .tAuthor {
-  font-weight: 600;
-  font-size: 0.88rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text);
 }
 
 .tRole {
   font-size: 0.76rem;
   color: var(--text-muted);
-  margin-top: 0.15rem;
+  font-family: var(--ff-b);
+  margin-top: 0.25rem;
 }
 
 .tCardDummy {
@@ -130,10 +138,11 @@
     scroll-snap-type: x mandatory;
     padding: 0 1.5rem 2rem 1.5rem;
     scroll-padding-left: 1.5rem;
-    scrollbar-width: thin;
+    scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
   }
-  .tCard { min-width: 85vw; width: auto; scroll-snap-align: center; }
+  .testiTrack::-webkit-scrollbar { display: none; }
+  .tCard { min-width: 78vw; width: auto; scroll-snap-align: center; }
   .testiDots { display: none; }
 }
 

@@ -1,6 +1,8 @@
 import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import CallToAction from '../components/CallToAction/CallToAction';
+import { serviceImages } from '../data/serviceImages';
+import styles from './ServicePage.module.css';
 
 export default function ServicePage() {
   const { serviceId } = useParams();
@@ -27,10 +29,20 @@ export default function ServicePage() {
           We provide unparalleled {formattedTitle.toLowerCase()} solutions tailored to your unique outdoor space. Our dedicated team applies 25+ years of experience to ensure pristine results that last a lifetime.
         </p>
         
-        {/* Placeholder for future detailed content (drone footage, sliders, etc) */}
-        <div className="rv rv-d3 vis" style={{ width: '100%', height: '400px', borderRadius: '16px', backgroundColor: 'var(--bg-card)', border: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{ color: 'var(--text-muted)' }}>Detailed Project Case Study Area</span>
+        {/* Masonry Portfolio Grid */}
+        <div style={{ width: '100%', marginTop: '3rem', textAlign: 'left' }}>
+          <h2 className="sec-t rv vis" style={{ fontSize: '2rem', marginBottom: '1.5rem', fontFamily: 'var(--ff-d)' }}>
+            Our {formattedTitle} <em>Portfolio</em>
+          </h2>
+          <div className={`rv rv-d3 vis ${styles.masonryGrid}`}>
+            {(serviceId && serviceImages[serviceId] ? serviceImages[serviceId] : serviceImages['landscaping']).map((imgUrl, i) => (
+              <div key={i} className={styles.mItem}>
+                <img src={imgUrl} alt={`${formattedTitle} Portfolio ${i+1}`} loading="lazy" />
+              </div>
+            ))}
+          </div>
         </div>
+      
       </div>
 
       <CallToAction />
