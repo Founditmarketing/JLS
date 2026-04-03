@@ -1,0 +1,40 @@
+.marq {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 1.1rem 0;
+  overflow: hidden;
+  background: var(--bg-card);
+}
+
+.marqTrack {
+  display: flex;
+  gap: 3rem;
+  animation: marquee 35s linear infinite;
+  width: max-content;
+}
+
+.marqItem {
+  font-family: var(--ff-d);
+  font-size: 1.15rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text-muted);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.marqDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cyan);
+  flex-shrink: 0;
+  box-shadow: 0 0 10px var(--cyan);
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

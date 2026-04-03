@@ -1,0 +1,132 @@
+.services {
+  background: var(--bg-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 196, 204, 0.06), transparent 70%);
+  pointer-events: none;
+}
+
+.srvGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.srvCard {
+  position: relative;
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  transition: all 0.5s var(--ease2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transform-style: preserve-3d;
+  height: 100%;
+}
+
+.srvCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.srvCard::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 196, 204, 0.06), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.srvCard:hover {
+  border-color: var(--border-cy);
+  transform: translateY(-6px) rotateX(2deg) rotateY(-1deg);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35), 0 0 80px var(--cyan-glow);
+}
+
+.srvCard:hover::before, .srvCard:hover::after {
+  opacity: 1;
+}
+
+.srvIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: var(--cyan-glow);
+  border: 1px solid var(--border-cy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--cyan);
+  transition: all 0.5s var(--ease);
+}
+
+.srvCard:hover .srvIcon {
+  background: var(--cyan);
+  color: var(--bg);
+  box-shadow: 0 8px 24px rgba(0, 196, 204, 0.3);
+  transform: scale(1.05);
+}
+
+.srvCard h3 {
+  font-family: var(--ff-d);
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.srvCard p {
+  color: var(--text-sec);
+  font-size: 0.88rem;
+  line-height: 1.75;
+  flex: 1;
+}
+
+.srvLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--cyan);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: gap 0.3s, color 0.3s;
+}
+
+.srvLink:hover {
+  gap: 0.8rem;
+  color: var(--cyan-bright);
+}
+
+@media(max-width: 1024px) {
+  .srvGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(max-width: 640px) {
+  .srvGrid { grid-template-columns: 1fr; }
+}

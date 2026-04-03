@@ -1,0 +1,133 @@
+.testi {
+  background: var(--bg-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.testi::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(200, 149, 58, 0.03), transparent);
+  pointer-events: none;
+}
+
+.testiCarousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.testiTrack {
+  display: flex;
+  transition: transform 0.7s var(--ease);
+}
+
+.testiSlide {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+.tCard {
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  position: relative;
+  transition: all 0.4s;
+}
+
+.tCard:hover {
+  border-color: var(--border-cy);
+  transform: translateY(-3px);
+}
+
+.tQuote {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.8rem;
+  font-family: var(--ff-d);
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: var(--cyan);
+  opacity: 0.1;
+  line-height: 1;
+}
+
+.tStars {
+  display: flex;
+  gap: 0.2rem;
+  margin-bottom: 1.2rem;
+  color: var(--gold);
+}
+
+.tText {
+  color: var(--text-sec);
+  font-size: 0.9rem;
+  line-height: 1.85;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.tAuthor {
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.tRole {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.tCardDummy {
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dummyText {
+  font-family: var(--ff-d);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--text-sec);
+}
+
+.dummyText em {
+  color: var(--cyan);
+  font-weight: 600;
+  font-style: italic;
+}
+
+.testiDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2.5rem;
+}
+
+.testiDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.testiDot.active {
+  background: var(--cyan);
+  box-shadow: 0 0 12px rgba(0, 196, 204, 0.4);
+}
+
+@media(max-width: 1024px) {
+  .testiSlide { grid-template-columns: 1fr; }
+  .tCard { max-width: 600px; margin: 0 auto; width: 100%; }
+}

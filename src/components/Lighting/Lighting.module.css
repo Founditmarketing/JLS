@@ -1,0 +1,54 @@
+.lighting {
+  background: var(--bg);
+  position: relative;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.aboutText {
+  color: var(--text-sec);
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.lightingVis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.lightingImg {
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.lightingImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+
+.lightingImg:hover img {
+  transform: scale(1.07);
+}
+
+.lightingImg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(9, 15, 12, 0.4));
+  pointer-events: none;
+}
+
+@media(max-width: 1024px) {
+  .container { grid-template-columns: 1fr; }
+}
