@@ -14,43 +14,53 @@
 
 .testiCarousel {
   position: relative;
-  overflow: hidden;
+  width: 100%;
 }
 
-.testiTrack {
-  display: flex;
-  gap: 1.5rem;
-  transition: transform 0.7s var(--ease);
+.testiStack {
+  display: grid;
+  grid-template-areas: "card";
+  width: 100%;
 }
 
 .tCard {
-  width: calc(50% - 0.75rem);
-  flex-shrink: 0;
-  padding: 3rem 2.5rem;
+  grid-area: card;
+  padding: 4rem 3rem;
   border-radius: 20px;
   background: var(--bg-card);
   border: 1px solid rgba(255, 255, 255, 0.04);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   position: relative;
-  transition: all 0.4s;
   overflow: hidden;
+  
+  /* Auto-fader logic */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px) scale(0.98);
+  transition: opacity 0.8s var(--ease), visibility 0.8s, transform 0.8s var(--ease), border-color 0.4s;
+  z-index: 1;
+}
+
+.tCard.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  z-index: 2;
 }
 
 .tCard:hover {
   border-color: rgba(255, 255, 255, 0.09);
-  transform: translateY(-3px);
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
 }
 
 .tQuote {
   position: absolute;
-  top: -1rem;
-  right: 1.5rem;
+  top: -1.5rem;
+  right: 2rem;
   font-family: var(--ff-d);
-  font-size: 8rem;
+  font-size: 10rem;
   font-weight: 700;
   color: var(--cyan);
-  opacity: 0.04;
+  opacity: 0.03;
   line-height: 1;
   pointer-events: none;
 }
@@ -58,94 +68,75 @@
 .tStars {
   display: flex;
   gap: 0.2rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
   color: var(--gold);
 }
 
 .tText {
   color: var(--text-sec);
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   line-height: 1.85;
   font-style: italic;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .tAuthor {
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--text);
+  position: relative;
+  z-index: 2;
 }
 
 .tRole {
-  font-size: 0.76rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
   font-family: var(--ff-b);
   margin-top: 0.25rem;
-}
-
-.tCardDummy {
-  opacity: 0.5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.dummyText {
-  font-family: var(--ff-d);
-  font-size: 2rem;
-  font-weight: 300;
-  color: var(--text-sec);
-}
-
-.dummyText em {
-  color: var(--cyan);
-  font-weight: 600;
-  font-style: italic;
+  position: relative;
+  z-index: 2;
 }
 
 .testiDots {
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
-  margin-top: 2.5rem;
+  gap: 0.75rem;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 5;
 }
 
 .testiDot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background: var(--border);
-  border: none;
-  transition: all 0.3s;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s;
   cursor: pointer;
 }
 
 .testiDot.active {
   background: var(--cyan);
   box-shadow: 0 0 12px rgba(0, 196, 204, 0.4);
-}
-
-@media(max-width: 1024px) {
-  .testiTrack {
-    width: 100%;
-    transform: none !important;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 0 1.5rem 2rem 1.5rem;
-    scroll-padding-left: 1.5rem;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-  .testiTrack::-webkit-scrollbar { display: none; }
-  .tCard { min-width: 78vw; width: auto; scroll-snap-align: center; }
-  .testiDots { display: none; }
+  transform: scale(1.1);
 }
 
 @media(max-width: 640px) {
   .testi { padding: 4rem 0; }
+  .tCard {
+    padding: 2.5rem 1.5rem;
+  }
+  .tQuote {
+    font-size: 7rem;
+    top: -1rem;
+    right: 1rem;
+  }
+  .tText {
+    font-size: 0.95rem;
+  }
 }

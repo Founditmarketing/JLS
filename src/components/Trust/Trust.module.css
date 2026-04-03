@@ -82,18 +82,34 @@
 @media(max-width: 640px) {
   .trustGrid { 
     display: flex;
+    flex-direction: column;
     width: 100%;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 1rem;
-    padding-bottom: 2rem;
-    scroll-padding-left: 1rem;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
+    gap: 0.85rem;
   }
   .trustCard {
-    min-width: 85vw;
-    scroll-snap-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 1.25rem;
+    border-radius: 14px;
+    gap: 1.25rem;
+  }
+  .trustTextWrap {
+    flex: 1;
+  }
+  .trustIcon {
+    margin: 0;
+    width: 48px;
+    height: 48px;
     flex-shrink: 0;
   }
+  .trustCard h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+  }
+  .trustCard p {
+    font-size: 0.8rem;
+  }
+  .trustCard::after { display: none; }
 }
